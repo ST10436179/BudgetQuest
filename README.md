@@ -17,4 +17,4 @@ BudgetQuest is a gamified personal budget tracker for Android built with Kotlin,
 4. Run on API 26+ physical device or emulator
 
 ## Demo Video
-- [Demo placeholder link](https://example.com/demo-video)
+- (https://youtu.be/NvN7KHka2zE?si=5-48Ifirfwk0joWu)
