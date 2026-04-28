@@ -12,10 +12,6 @@
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-main-55:\\navigation\\nav_graph.xml"
     },
     {
-        "merged": "com.budgetquest.app-debug-53:/drawable_bg_dashboard_total_card.xml.flat",
-        "source": "com.budgetquest.app-main-55:/drawable/bg_dashboard_total_card.xml"
-    },
-    {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-debug-53:\\layout_fragment_category_totals.xml.flat",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-main-55:\\layout\\fragment_category_totals.xml"
     },
@@ -44,12 +40,12 @@
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-main-55:\\layout\\fragment_spending_graph.xml"
     },
     {
-        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-debug-53:\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-main-55:\\layout\\activity_main.xml"
+        "merged": "com.budgetquest.app-debug-53:/layout_fragment_spending_graph.xml.flat",
+        "source": "com.budgetquest.app-main-55:/layout/fragment_spending_graph.xml"
     },
     {
-        "merged": "com.budgetquest.app-debug-53:/layout_fragment_dashboard.xml.flat",
-        "source": "com.budgetquest.app-main-55:/layout/fragment_dashboard.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-debug-53:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-main-55:\\layout\\activity_main.xml"
     },
     {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-debug-53:\\layout_fragment_dashboard.xml.flat",
@@ -64,8 +60,8 @@
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-main-55:\\drawable\\bg_soft_card.xml"
     },
     {
-        "merged": "com.budgetquest.app-debug-53:/drawable_bg_dark_card.xml.flat",
-        "source": "com.budgetquest.app-main-55:/drawable/bg_dark_card.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-debug-53:\\drawable_bg_dashboard_total_card.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-main-55:\\drawable\\bg_dashboard_total_card.xml"
     },
     {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-debug-53:\\xml_file_paths.xml.flat",
@@ -110,6 +106,10 @@
     {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-debug-53:\\drawable_bg_button_green.xml.flat",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-main-55:\\drawable\\bg_button_green.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-debug-53:\\drawable_bg_dark_card.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-main-55:\\drawable\\bg_dark_card.xml"
     },
     {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-debug-53:\\drawable_bg_card.xml.flat",

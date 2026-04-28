@@ -18,7 +18,14 @@ class SessionManager(context: Context) {
         prefs.edit().remove(KEY_USER_ID).apply()
     }
 
+    fun setDemoAutoLoginEnabled(enabled: Boolean) {
+        prefs.edit().putBoolean(KEY_DEMO_AUTO_LOGIN, enabled).apply()
+    }
+
+    fun isDemoAutoLoginEnabled(): Boolean = prefs.getBoolean(KEY_DEMO_AUTO_LOGIN, true)
+
     companion object {
         private const val KEY_USER_ID = "userId"
+        private const val KEY_DEMO_AUTO_LOGIN = "demoAutoLoginEnabled"
     }
 }

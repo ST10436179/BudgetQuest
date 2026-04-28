@@ -3262,6 +3262,7 @@ id actions
 id activity_chooser_view_content
 id add
 id addEditExpenseFragment
+id addExpenseBtn
 id addTile
 id alertTitle
 id aligned
@@ -3394,6 +3395,7 @@ id elastic
 id embed
 id end
 id endDate
+id endDateGraph
 id endTime
 id endToStart
 id enterAlways
@@ -3432,6 +3434,7 @@ id ghost_view
 id ghost_view_holder
 id gone
 id graph
+id graphLegend
 id graph_wrap
 id group_divider
 id grouping
@@ -3684,6 +3687,7 @@ id src_over
 id standard
 id start
 id startDate
+id startDateGraph
 id startHorizontal
 id startTime
 id startToEnd

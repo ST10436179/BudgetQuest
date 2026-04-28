@@ -23,6 +23,9 @@ public final class FragmentExpenseListBinding implements ViewBinding {
   private final ScrollView rootView;
 
   @NonNull
+  public final TextView addExpenseBtn;
+
+  @NonNull
   public final EditText endDate;
 
   @NonNull
@@ -40,10 +43,12 @@ public final class FragmentExpenseListBinding implements ViewBinding {
   @NonNull
   public final TextView totalText;
 
-  private FragmentExpenseListBinding(@NonNull ScrollView rootView, @NonNull EditText endDate,
-      @NonNull TextView entryCountText, @NonNull LinearLayout listContainer,
-      @NonNull Button loadMore, @NonNull EditText startDate, @NonNull TextView totalText) {
+  private FragmentExpenseListBinding(@NonNull ScrollView rootView, @NonNull TextView addExpenseBtn,
+      @NonNull EditText endDate, @NonNull TextView entryCountText,
+      @NonNull LinearLayout listContainer, @NonNull Button loadMore, @NonNull EditText startDate,
+      @NonNull TextView totalText) {
     this.rootView = rootView;
+    this.addExpenseBtn = addExpenseBtn;
     this.endDate = endDate;
     this.entryCountText = entryCountText;
     this.listContainer = listContainer;
@@ -79,6 +84,12 @@ public final class FragmentExpenseListBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.addExpenseBtn;
+      TextView addExpenseBtn = ViewBindings.findChildViewById(rootView, id);
+      if (addExpenseBtn == null) {
+        break missingId;
+      }
+
       id = R.id.endDate;
       EditText endDate = ViewBindings.findChildViewById(rootView, id);
       if (endDate == null) {
@@ -115,8 +126,8 @@ public final class FragmentExpenseListBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentExpenseListBinding((ScrollView) rootView, endDate, entryCountText,
-          listContainer, loadMore, startDate, totalText);
+      return new FragmentExpenseListBinding((ScrollView) rootView, addExpenseBtn, endDate,
+          entryCountText, listContainer, loadMore, startDate, totalText);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

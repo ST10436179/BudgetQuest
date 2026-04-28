@@ -34,7 +34,9 @@ class AppViewModel(application: Application) : AndroidViewModel(application) {
                 badges.postValue(repo.badges(id))
                 return@launch
             }
-            ensureDemoDataAndLogin()
+            if (session.isDemoAutoLoginEnabled()) {
+                ensureDemoDataAndLogin()
+            }
         }
     }
 
@@ -216,8 +218,13 @@ class AppViewModel(application: Application) : AndroidViewModel(application) {
     fun logout() {
         Timber.d("logout")
         session.clear()
+        session.setDemoAutoLoginEnabled(false)
         currentUserId.value = -1L
         currentUser.value = null
+    }
+
+    fun enableDemoAutoLogin() {
+        session.setDemoAutoLoginEnabled(true)
     }
 
     fun refreshUser() {

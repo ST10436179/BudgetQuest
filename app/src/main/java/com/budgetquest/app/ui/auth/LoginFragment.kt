@@ -48,6 +48,7 @@ class LoginFragment : Fragment() {
             }
         }
         binding.demoBtn.setOnClickListener {
+            vm.enableDemoAutoLogin()
             binding.username.setText(AppViewModel.DEMO_USERNAME)
             binding.password.setText(AppViewModel.DEMO_PASSWORD)
             vm.login(AppViewModel.DEMO_USERNAME, AppViewModel.DEMO_PASSWORD)

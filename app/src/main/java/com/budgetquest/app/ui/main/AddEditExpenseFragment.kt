@@ -58,11 +58,19 @@ class AddEditExpenseFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         editExpenseId = arguments?.getString("expenseId")?.toLongOrNull() ?: -1L
         if (editExpenseId > 0) binding.title.text = "Edit Expense"
+        prefillDefaultsForNewExpense()
         bindPickers()
         bindCategorySpinner()
         binding.receiptBox.setOnClickListener { showReceiptPickerDialog() }
         binding.saveBtn.setOnClickListener { saveExpense() }
         if (editExpenseId > 0) loadExpenseForEdit(editExpenseId)
+    }
+
+    private fun prefillDefaultsForNewExpense() {
+        if (editExpenseId > 0) return
+        if (binding.dateInput.text.isNullOrBlank()) binding.dateInput.setText(LocalDate.now().toString())
+        if (binding.startTime.text.isNullOrBlank()) binding.startTime.setText("09:00")
+        if (binding.endTime.text.isNullOrBlank()) binding.endTime.setText("09:30")
     }
 
     private fun bindPickers() {
@@ -119,7 +127,11 @@ class AddEditExpenseFragment : Fragment() {
     private fun saveExpense() {
         try {
             val userId = vm.currentUserId.value ?: -1L
-            val amount = binding.amountInput.text?.toString()?.toDoubleOrNull()
+            val amount = binding.amountInput.text?.toString()
+                ?.replace("R", "", ignoreCase = true)
+                ?.replace(",", "")
+                ?.trim()
+                ?.toDoubleOrNull()
             val date = binding.dateInput.text?.toString().orEmpty()
             val start = binding.startTime.text?.toString().orEmpty()
             val end = binding.endTime.text?.toString().orEmpty()
@@ -127,7 +139,11 @@ class AddEditExpenseFragment : Fragment() {
             val category = selectedCategories.getOrNull(binding.categorySpinner.selectedItemPosition)
 
             if (userId <= 0 || amount == null || date.isBlank() || start.isBlank() || end.isBlank() || category == null) {
-                binding.errorText.text = "Please complete all required fields"
+                binding.errorText.text = if (category == null) {
+                    "Please create/select a category first."
+                } else {
+                    "Please complete all required fields"
+                }
                 return
             }
             LocalDate.parse(date, DateTimeFormatter.ISO_DATE)

@@ -39,6 +39,7 @@ id action_profile_to_budget_goals
 id action_profile_to_category_manager
 id action_register_to_home
 id addEditExpenseFragment
+id addExpenseBtn
 id addTile
 id amountInput
 id answer
@@ -63,6 +64,7 @@ id dateInput
 id demoBtn
 id descriptionInput
 id endDate
+id endDateGraph
 id endTime
 id entryCountText
 id errorText
@@ -73,6 +75,7 @@ id forgotPasswordFragment
 id gauge
 id gaugeText
 id generalError
+id graphLegend
 id levelBadge
 id levelProgress
 id listContainer
@@ -103,6 +106,7 @@ id securityQuestion
 id setGoals
 id spendingGraphFragment
 id startDate
+id startDateGraph
 id startTime
 id statusCard1
 id statusCard2

@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
@@ -22,9 +23,23 @@ public final class FragmentSpendingGraphBinding implements ViewBinding {
   @NonNull
   public final LineChart chart;
 
-  private FragmentSpendingGraphBinding(@NonNull LinearLayout rootView, @NonNull LineChart chart) {
+  @NonNull
+  public final TextView endDateGraph;
+
+  @NonNull
+  public final TextView graphLegend;
+
+  @NonNull
+  public final TextView startDateGraph;
+
+  private FragmentSpendingGraphBinding(@NonNull LinearLayout rootView, @NonNull LineChart chart,
+      @NonNull TextView endDateGraph, @NonNull TextView graphLegend,
+      @NonNull TextView startDateGraph) {
     this.rootView = rootView;
     this.chart = chart;
+    this.endDateGraph = endDateGraph;
+    this.graphLegend = graphLegend;
+    this.startDateGraph = startDateGraph;
   }
 
   @Override
@@ -60,7 +75,26 @@ public final class FragmentSpendingGraphBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentSpendingGraphBinding((LinearLayout) rootView, chart);
+      id = R.id.endDateGraph;
+      TextView endDateGraph = ViewBindings.findChildViewById(rootView, id);
+      if (endDateGraph == null) {
+        break missingId;
+      }
+
+      id = R.id.graphLegend;
+      TextView graphLegend = ViewBindings.findChildViewById(rootView, id);
+      if (graphLegend == null) {
+        break missingId;
+      }
+
+      id = R.id.startDateGraph;
+      TextView startDateGraph = ViewBindings.findChildViewById(rootView, id);
+      if (startDateGraph == null) {
+        break missingId;
+      }
+
+      return new FragmentSpendingGraphBinding((LinearLayout) rootView, chart, endDateGraph,
+          graphLegend, startDateGraph);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
