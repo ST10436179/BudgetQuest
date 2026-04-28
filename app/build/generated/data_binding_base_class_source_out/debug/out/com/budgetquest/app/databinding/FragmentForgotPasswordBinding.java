@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,7 +19,7 @@ import java.lang.String;
 
 public final class FragmentForgotPasswordBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final ScrollView rootView;
 
   @NonNull
   public final EditText answer;
@@ -36,7 +36,7 @@ public final class FragmentForgotPasswordBinding implements ViewBinding {
   @NonNull
   public final EditText username;
 
-  private FragmentForgotPasswordBinding(@NonNull LinearLayout rootView, @NonNull EditText answer,
+  private FragmentForgotPasswordBinding(@NonNull ScrollView rootView, @NonNull EditText answer,
       @NonNull TextView errorText, @NonNull EditText newPassword, @NonNull Button resetBtn,
       @NonNull EditText username) {
     this.rootView = rootView;
@@ -49,7 +49,7 @@ public final class FragmentForgotPasswordBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public ScrollView getRoot() {
     return rootView;
   }
 
@@ -104,7 +104,7 @@ public final class FragmentForgotPasswordBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentForgotPasswordBinding((LinearLayout) rootView, answer, errorText,
+      return new FragmentForgotPasswordBinding((ScrollView) rootView, answer, errorText,
           newPassword, resetBtn, username);
     }
     String missingId = rootView.getResources().getResourceName(id);

@@ -3,19 +3,102 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bq_bg"
-    android:padding="16dp">
+    android:background="@color/bq_canvas">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-        <TextView android:id="@+id/welcome" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@color/white" android:textSize="24sp" android:textStyle="bold" />
-        <TextView android:id="@+id/levelBadge" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/bg_card" android:padding="8dp" android:textColor="@color/bq_accent" />
-        <TextView android:id="@+id/subtitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:textColor="@color/bq_text_secondary" />
-        <ProgressBar android:id="@+id/gauge" style="?android:attr/progressBarStyleHorizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:max="100" android:progress="46" />
-        <TextView android:id="@+id/gaugeText" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="R 2,340 of R 5,000" android:textColor="@color/white" />
-    </LinearLayout>
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_header_block"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/welcome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/subtitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="#C9E0D6"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/levelBadge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_chip"
+                        android:paddingHorizontal="14dp"
+                        android:paddingVertical="8dp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/bg_soft_card"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <ProgressBar
+                        android:id="@+id/gauge"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="12dp"
+                        android:max="100"
+                        android:progress="46"
+                        android:progressTint="@color/bq_accent" />
+
+                    <TextView
+                        android:id="@+id/gaugeText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/bq_header"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bq_panel"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    style="@style/Widget.BudgetQuest.SectionLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CATEGORIES THIS MONTH" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
@@ -25,5 +108,6 @@
         android:layout_margin="16dp"
         android:contentDescription="+"
         android:src="@android:drawable/ic_input_add"
-        app:backgroundTint="@color/bq_accent" />
+        app:backgroundTint="@color/bq_accent"
+        app:tint="@color/bq_text_dark" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

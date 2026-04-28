@@ -8,7 +8,7 @@ class SecurityUtilsTest {
     @Test
     fun sha256_hashMatchesKnownValue() {
         assertEquals(
-            "ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f",
+            "008c70392e3abfbd0fa47bbc2ed96aa99bd49e159727fcba0f2e6abeb3a9d601",
             SecurityUtils.sha256("Password123")
         )
     }

@@ -2,14 +2,26 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bq_bg">
+    android:background="@color/bq_canvas">
 
-    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
-        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Expense History" android:textColor="@color/white" android:textSize="24sp" android:textStyle="bold" />
-        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="All transactions by date range" android:textColor="@color/bq_text_secondary" />
-        <EditText android:id="@+id/startDate" style="@style/Widget.BudgetQuest.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:focusable="false" />
-        <EditText android:id="@+id/endDate" style="@style/Widget.BudgetQuest.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:focusable="false" />
-        <LinearLayout android:id="@+id/listContainer" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="10dp" />
-        <Button android:id="@+id/loadMore" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_header_block"
+            android:orientation="vertical"
+            android:padding="16dp">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Expense History" android:textColor="@color/white" android:textSize="32sp" android:textStyle="bold" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="All transactions by date range" android:textColor="#C9E0D6" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@color/bq_panel" android:orientation="vertical" android:padding="16dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                <EditText android:id="@+id/startDate" style="@style/Widget.BudgetQuest.Input" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:focusable="false" android:hint="01 Mar" />
+                <Space android:layout_width="10dp" android:layout_height="1dp" />
+                <EditText android:id="@+id/endDate" style="@style/Widget.BudgetQuest.Input" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:focusable="false" android:hint="31 Mar" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/listContainer" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="12dp" />
+            <Button android:id="@+id/loadMore" style="@style/Widget.BudgetQuest.PrimaryButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="Load more..." />
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>

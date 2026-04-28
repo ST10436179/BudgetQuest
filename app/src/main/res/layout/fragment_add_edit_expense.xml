@@ -2,22 +2,51 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bq_bg">
+    android:background="@color/bq_canvas">
 
-    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
-        <TextView android:id="@+id/title" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="New Expense" android:textColor="@color/white" android:textSize="24sp" android:textStyle="bold" />
-        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="+10 XP awarded on save" android:textColor="@color/bq_accent" />
-        <EditText android:id="@+id/amountInput" style="@style/Widget.BudgetQuest.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:hint="Amount (R)" android:inputType="numberDecimal" />
-        <EditText android:id="@+id/dateInput" style="@style/Widget.BudgetQuest.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:focusable="false" android:hint="Date yyyy-MM-dd" />
-        <EditText android:id="@+id/startTime" style="@style/Widget.BudgetQuest.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:focusable="false" android:hint="Start Time HH:mm" />
-        <EditText android:id="@+id/endTime" style="@style/Widget.BudgetQuest.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:focusable="false" android:hint="End Time HH:mm" />
-        <Spinner android:id="@+id/categorySpinner" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:background="@drawable/bg_card" />
-        <EditText android:id="@+id/descriptionInput" style="@style/Widget.BudgetQuest.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:hint="Description" />
-        <LinearLayout android:id="@+id/receiptBox" android:layout_width="match_parent" android:layout_height="120dp" android:layout_marginTop="12dp" android:background="@drawable/bg_card" android:gravity="center" android:orientation="vertical">
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📷 Tap to attach receipt / Camera or Gallery" android:textColor="@color/white" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_header_block"
+            android:orientation="vertical"
+            android:padding="16dp">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="← Cancel" android:textColor="#B8D8CB" />
+            <TextView android:id="@+id/title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="New Expense" android:textColor="@color/white" android:textSize="32sp" android:textStyle="bold" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="+10 XP awarded on save" android:textColor="#C9E0D6" />
         </LinearLayout>
-        <ImageView android:id="@+id/receiptPreview" android:layout_width="match_parent" android:layout_height="120dp" android:layout_marginTop="8dp" android:scaleType="centerCrop" />
-        <TextView android:id="@+id/errorText" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@color/bq_warning" />
-        <Button android:id="@+id/saveBtn" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="Save Expense" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@color/bq_panel" android:orientation="vertical" android:padding="16dp">
+            <TextView style="@style/Widget.BudgetQuest.SectionLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="AMOUNT (ZAR)" />
+            <EditText android:id="@+id/amountInput" style="@style/Widget.BudgetQuest.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:hint="R 450.00" android:inputType="numberDecimal" />
+            <TextView style="@style/Widget.BudgetQuest.SectionLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="DATE" />
+            <EditText android:id="@+id/dateInput" style="@style/Widget.BudgetQuest.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:focusable="false" android:hint="18 March 2026" />
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:orientation="horizontal">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                    <TextView style="@style/Widget.BudgetQuest.SectionLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="START" />
+                    <EditText android:id="@+id/startTime" style="@style/Widget.BudgetQuest.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:focusable="false" android:hint="08:30" />
+                </LinearLayout>
+                <Space android:layout_width="10dp" android:layout_height="1dp" />
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                    <TextView style="@style/Widget.BudgetQuest.SectionLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="END" />
+                    <EditText android:id="@+id/endTime" style="@style/Widget.BudgetQuest.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:focusable="false" android:hint="09:00" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView style="@style/Widget.BudgetQuest.SectionLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="CATEGORY" />
+            <Spinner android:id="@+id/categorySpinner" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:background="@drawable/bg_input_field" />
+            <TextView style="@style/Widget.BudgetQuest.SectionLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="DESCRIPTION" />
+            <EditText android:id="@+id/descriptionInput" style="@style/Widget.BudgetQuest.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:hint="Woolworths weekly shop" />
+            <TextView style="@style/Widget.BudgetQuest.SectionLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="RECEIPT PHOTO" />
+            <LinearLayout android:id="@+id/receiptBox" android:layout_width="match_parent" android:layout_height="120dp" android:layout_marginTop="6dp" android:background="@drawable/bg_input_field" android:gravity="center" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📷" android:textSize="20sp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tap to attach receipt" android:textColor="@color/bq_text_muted" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Camera or Gallery" android:textColor="@color/bq_text_muted" android:textSize="12sp" />
+            </LinearLayout>
+            <ImageView android:id="@+id/receiptPreview" android:layout_width="match_parent" android:layout_height="120dp" android:layout_marginTop="8dp" android:scaleType="centerCrop" />
+            <TextView android:id="@+id/errorText" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@color/bq_warning" />
+            <Button android:id="@+id/saveBtn" style="@style/Widget.BudgetQuest.GoldButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="Save Expense" />
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>

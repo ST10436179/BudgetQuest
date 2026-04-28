@@ -6,6 +6,16 @@
     <color name="bq_safe">#4CAF50</color>
     <color name="bq_text_primary">#FFFFFF</color>
     <color name="bq_text_secondary">#B0BEC5</color>
+    <color name="bq_canvas">#EEF1F5</color>
+    <color name="bq_panel">#FFFFFF</color>
+    <color name="bq_header">#175B46</color>
+    <color name="bq_input_bg">#F1F4F7</color>
+    <color name="bq_input_border">#C8D1DA</color>
+    <color name="bq_text_dark">#1E2A35</color>
+    <color name="bq_text_muted">#607080</color>
+    <color name="bq_link">#0B5CAD</color>
+    <color name="bq_tab_inactive">#8A99A8</color>
+    <color name="bq_tab_active">#0B5CAD</color>
     <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
 </resources>

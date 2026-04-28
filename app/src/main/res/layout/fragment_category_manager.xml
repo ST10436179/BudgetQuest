@@ -2,11 +2,16 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bq_bg">
-    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
-        <Button android:id="@+id/backBtn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="← Back" />
-        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Category Manager" android:textColor="@color/white" android:textSize="22sp" android:textStyle="bold" />
-        <TextView android:id="@+id/addTile" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:background="@drawable/bg_card" android:gravity="center" android:padding="20dp" android:text="+ Add New" android:textColor="@color/bq_accent" />
-        <LinearLayout android:id="@+id/tileContainer" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:orientation="vertical" />
+    android:background="@color/bq_canvas">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/bg_header_block" android:orientation="vertical" android:padding="16dp">
+            <Button android:id="@+id/backBtn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@android:color/transparent" android:text="← Profile" android:textAllCaps="false" android:textColor="#B8D8CB" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Categories" android:textColor="@color/white" android:textSize="30sp" android:textStyle="bold" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Manage expense categories" android:textColor="#C9E0D6" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@color/bq_panel" android:orientation="vertical" android:padding="16dp">
+            <TextView android:id="@+id/addTile" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:background="@drawable/bg_input_field" android:gravity="center" android:padding="20dp" android:text="+ Add New" android:textColor="@color/bq_text_muted" android:textStyle="bold" />
+            <LinearLayout android:id="@+id/tileContainer" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:orientation="vertical" />
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>

@@ -1,15 +1,33 @@
 R_DEF: Internal format may change without notice
 local
 color black
+color bottom_nav_selector
 color bq_accent
 color bq_bg
+color bq_canvas
+color bq_header
+color bq_input_bg
+color bq_input_border
+color bq_link
+color bq_panel
 color bq_safe
 color bq_surface
+color bq_tab_active
+color bq_tab_inactive
+color bq_text_dark
+color bq_text_muted
 color bq_text_primary
 color bq_text_secondary
 color bq_warning
 color white
+drawable bg_button_gold
+drawable bg_button_green
 drawable bg_card
+drawable bg_chip
+drawable bg_header_block
+drawable bg_input_field
+drawable bg_screen_panel
+drawable bg_soft_card
 drawable ic_launcher_background
 id action_home_to_add_edit
 id action_login_to_forgot
@@ -104,5 +122,9 @@ menu bottom_nav_menu
 navigation nav_graph
 string app_name
 style Theme.BudgetQuest
+style Widget.BudgetQuest
+style Widget.BudgetQuest.GoldButton
 style Widget.BudgetQuest.Input
+style Widget.BudgetQuest.PrimaryButton
+style Widget.BudgetQuest.SectionLabel
 xml file_paths

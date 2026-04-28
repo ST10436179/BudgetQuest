@@ -2,15 +2,35 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bq_bg"
-    android:orientation="vertical"
-    android:padding="16dp">
-    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Spending Trends" android:textColor="@color/white" android:textSize="24sp" android:textStyle="bold" />
-    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Daily breakdown by category" android:textColor="@color/bq_text_secondary" />
-    <com.github.mikephil.charting.charts.LineChart
-        android:id="@+id/chart"
+    android:background="@color/bq_canvas"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_header_block"
+        android:orientation="vertical"
+        android:padding="16dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Spending Trends" android:textColor="@color/white" android:textSize="32sp" android:textStyle="bold" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Daily breakdown by category" android:textColor="#C9E0D6" />
+    </LinearLayout>
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:layout_marginTop="12dp" />
+        android:background="@color/bq_panel"
+        android:orientation="vertical"
+        android:padding="16dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="@drawable/bg_chip" android:gravity="center" android:padding="12dp" android:text="01 Mar" android:textColor="@color/bq_text_dark" />
+            <TextView android:layout_width="30dp" android:layout_height="wrap_content" android:gravity="center" android:text="→" android:textColor="@color/bq_text_muted" />
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="@drawable/bg_chip" android:gravity="center" android:padding="12dp" android:text="31 Mar" android:textColor="@color/bq_text_dark" />
+        </LinearLayout>
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chart"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="12dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_soft_card" />
+    </LinearLayout>
 </LinearLayout>
