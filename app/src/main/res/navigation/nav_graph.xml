@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.budgetquest.app.ui.auth.LoginFragment"
+        android:label="Login">
+        <action android:id="@+id/action_login_to_register" app:destination="@id/registerFragment" />
+        <action android:id="@+id/action_login_to_home" app:destination="@id/dashboardFragment" />
+        <action android:id="@+id/action_login_to_forgot" app:destination="@id/forgotPasswordFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.budgetquest.app.ui.auth.RegisterFragment"
+        android:label="Register">
+        <action android:id="@+id/action_register_to_home" app:destination="@id/dashboardFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.budgetquest.app.ui.auth.ForgotPasswordFragment"
+        android:label="Forgot Password" />
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.budgetquest.app.ui.main.DashboardFragment"
+        android:label="Home">
+        <action android:id="@+id/action_home_to_add_edit" app:destination="@id/addEditExpenseFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/expenseListFragment"
+        android:name="com.budgetquest.app.ui.main.ExpenseListFragment"
+        android:label="Exps" />
+
+    <fragment
+        android:id="@+id/categoryTotalsFragment"
+        android:name="com.budgetquest.app.ui.main.CategoryTotalsFragment"
+        android:label="Cats" />
+
+    <fragment
+        android:id="@+id/spendingGraphFragment"
+        android:name="com.budgetquest.app.ui.main.SpendingGraphFragment"
+        android:label="Graph" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.budgetquest.app.ui.main.ProfileFragment"
+        android:label="Profile">
+        <action android:id="@+id/action_profile_to_budget_goals" app:destination="@id/budgetGoalsFragment" />
+        <action android:id="@+id/action_profile_to_category_manager" app:destination="@id/categoryManagerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addEditExpenseFragment"
+        android:name="com.budgetquest.app.ui.main.AddEditExpenseFragment"
+        android:label="Expense" />
+
+    <fragment
+        android:id="@+id/budgetGoalsFragment"
+        android:name="com.budgetquest.app.ui.main.BudgetGoalsFragment"
+        android:label="Budget Goals" />
+
+    <fragment
+        android:id="@+id/categoryManagerFragment"
+        android:name="com.budgetquest.app.ui.main.CategoryManagerFragment"
+        android:label="Category Manager" />
+</navigation>

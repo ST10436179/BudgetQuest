@@ -1,0 +1,74 @@
+[
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-mergeDebugResources-52:\\layout\\fragment_forgot_password.xml",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-main-55:\\layout\\fragment_forgot_password.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-mergeDebugResources-52:\\layout\\fragment_login.xml",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-main-55:\\layout\\fragment_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-mergeDebugResources-52:\\layout\\fragment_spending_graph.xml",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-main-55:\\layout\\fragment_spending_graph.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-mergeDebugResources-52:\\layout\\fragment_category_manager.xml",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-main-55:\\layout\\fragment_category_manager.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-mergeDebugResources-52:\\layout\\fragment_category_totals.xml",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-main-55:\\layout\\fragment_category_totals.xml"
+    },
+    {
+        "merged": "com.budgetquest.app-mergeDebugResources-52:/layout/fragment_expense_list.xml",
+        "source": "com.budgetquest.app-main-55:/layout/fragment_expense_list.xml"
+    },
+    {
+        "merged": "com.budgetquest.app-mergeDebugResources-52:/layout/fragment_forgot_password.xml",
+        "source": "com.budgetquest.app-main-55:/layout/fragment_forgot_password.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-mergeDebugResources-52:\\layout\\fragment_profile.xml",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-main-55:\\layout\\fragment_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-mergeDebugResources-52:\\layout\\fragment_expense_list.xml",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-main-55:\\layout\\fragment_expense_list.xml"
+    },
+    {
+        "merged": "com.budgetquest.app-mergeDebugResources-52:/layout/fragment_login.xml",
+        "source": "com.budgetquest.app-main-55:/layout/fragment_login.xml"
+    },
+    {
+        "merged": "com.budgetquest.app-mergeDebugResources-52:/layout/fragment_add_edit_expense.xml",
+        "source": "com.budgetquest.app-main-55:/layout/fragment_add_edit_expense.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-mergeDebugResources-52:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-main-55:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "com.budgetquest.app-mergeDebugResources-52:/layout/fragment_register.xml",
+        "source": "com.budgetquest.app-main-55:/layout/fragment_register.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-mergeDebugResources-52:\\layout\\fragment_add_edit_expense.xml",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-main-55:\\layout\\fragment_add_edit_expense.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-mergeDebugResources-52:\\layout\\fragment_dashboard.xml",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-main-55:\\layout\\fragment_dashboard.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-mergeDebugResources-52:\\layout\\fragment_register.xml",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-main-55:\\layout\\fragment_register.xml"
+    },
+    {
+        "merged": "com.budgetquest.app-mergeDebugResources-52:/layout/fragment_budget_goals.xml",
+        "source": "com.budgetquest.app-main-55:/layout/fragment_budget_goals.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-mergeDebugResources-52:\\layout\\fragment_budget_goals.xml",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-main-55:\\layout\\fragment_budget_goals.xml"
+    }
+]

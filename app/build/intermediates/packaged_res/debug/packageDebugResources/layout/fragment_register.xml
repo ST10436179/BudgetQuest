@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bq_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create Account"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <EditText android:id="@+id/username" style="@style/Widget.BudgetQuest.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:hint="Username" />
+        <TextView android:id="@+id/usernameError" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@color/bq_warning" />
+        <EditText android:id="@+id/password" style="@style/Widget.BudgetQuest.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:hint="Password" android:inputType="textPassword" />
+        <TextView android:id="@+id/passwordError" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@color/bq_warning" />
+        <EditText android:id="@+id/confirmPassword" style="@style/Widget.BudgetQuest.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:hint="Confirm Password" android:inputType="textPassword" />
+        <TextView android:id="@+id/confirmError" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@color/bq_warning" />
+
+        <Spinner android:id="@+id/securityQuestion" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:background="@drawable/bg_card" />
+        <EditText android:id="@+id/securityAnswer" style="@style/Widget.BudgetQuest.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:hint="Security Answer" />
+        <TextView android:id="@+id/answerError" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@color/bq_warning" />
+        <TextView android:id="@+id/generalError" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@color/bq_warning" />
+
+        <Button android:id="@+id/registerBtn" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:backgroundTint="@color/bq_accent" android:text="Register" android:textColor="@color/black" />
+    </LinearLayout>
+</ScrollView>

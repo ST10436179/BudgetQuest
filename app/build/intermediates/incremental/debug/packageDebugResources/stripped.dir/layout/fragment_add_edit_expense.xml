@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bq_bg">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+        <TextView android:id="@+id/title" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="New Expense" android:textColor="@color/white" android:textSize="24sp" android:textStyle="bold" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="+10 XP awarded on save" android:textColor="@color/bq_accent" />
+        <EditText android:id="@+id/amountInput" style="@style/Widget.BudgetQuest.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:hint="Amount (R)" android:inputType="numberDecimal" />
+        <EditText android:id="@+id/dateInput" style="@style/Widget.BudgetQuest.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:focusable="false" android:hint="Date yyyy-MM-dd" />
+        <EditText android:id="@+id/startTime" style="@style/Widget.BudgetQuest.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:focusable="false" android:hint="Start Time HH:mm" />
+        <EditText android:id="@+id/endTime" style="@style/Widget.BudgetQuest.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:focusable="false" android:hint="End Time HH:mm" />
+        <Spinner android:id="@+id/categorySpinner" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:background="@drawable/bg_card" />
+        <EditText android:id="@+id/descriptionInput" style="@style/Widget.BudgetQuest.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:hint="Description" />
+        <LinearLayout android:id="@+id/receiptBox" android:layout_width="match_parent" android:layout_height="120dp" android:layout_marginTop="12dp" android:background="@drawable/bg_card" android:gravity="center" android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📷 Tap to attach receipt / Camera or Gallery" android:textColor="@color/white" />
+        </LinearLayout>
+        <ImageView android:id="@+id/receiptPreview" android:layout_width="match_parent" android:layout_height="120dp" android:layout_marginTop="8dp" android:scaleType="centerCrop" />
+        <TextView android:id="@+id/errorText" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@color/bq_warning" />
+        <Button android:id="@+id/saveBtn" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="Save Expense" />
+    </LinearLayout>
+</ScrollView>

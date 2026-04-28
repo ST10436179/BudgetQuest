@@ -1,0 +1,11 @@
+<resources>
+    <color name="bq_bg">#1E4D2B</color>
+    <color name="bq_surface">#2A5E38</color>
+    <color name="bq_accent">#F5A623</color>
+    <color name="bq_warning">#E53935</color>
+    <color name="bq_safe">#4CAF50</color>
+    <color name="bq_text_primary">#FFFFFF</color>
+    <color name="bq_text_secondary">#B0BEC5</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+</resources>
