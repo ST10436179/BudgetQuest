@@ -13,90 +13,163 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="16dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/bg_header_block"
-                android:orientation="vertical"
-                android:padding="16dp">
-
-                <TextView
-                    android:id="@+id/welcome"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:textSize="28sp"
-                    android:textStyle="bold" />
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/subtitle"
-                        android:layout_width="0dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textColor="#C9E0D6"
+                        android:text="Good morning,"
+                        android:textColor="@color/bq_text_muted"
                         android:textSize="14sp" />
 
                     <TextView
-                        android:id="@+id/levelBadge"
-                        android:layout_width="wrap_content"
+                        android:id="@+id/welcome"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/bg_chip"
-                        android:paddingHorizontal="14dp"
-                        android:paddingVertical="8dp"
-                        android:textColor="@color/white"
+                        android:textColor="@color/bq_text_dark"
+                        android:textSize="34sp"
                         android:textStyle="bold" />
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="14dp"
-                    android:background="@drawable/bg_soft_card"
-                    android:orientation="vertical"
-                    android:padding="14dp">
-
-                    <ProgressBar
-                        android:id="@+id/gauge"
-                        style="?android:attr/progressBarStyleHorizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="12dp"
-                        android:max="100"
-                        android:progress="46"
-                        android:progressTint="@color/bq_accent" />
-
-                    <TextView
-                        android:id="@+id/gaugeText"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:textColor="@color/bq_header"
-                        android:textSize="28sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
+                <TextView
+                    android:id="@+id/levelBadge"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/bg_chip"
+                    android:gravity="center"
+                    android:textColor="@color/bq_accent"
+                    android:textStyle="bold" />
             </LinearLayout>
+
+            <TextView
+                android:id="@+id/subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/bq_text_muted" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/bq_panel"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_dashboard_total_card"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:padding="14dp">
 
                 <TextView
                     style="@style/Widget.BudgetQuest.SectionLabel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="CATEGORIES THIS MONTH" />
+                    android:text="TOTAL SPENT THIS MONTH"
+                    android:textColor="#BFD3EC" />
+
+                <TextView
+                    android:id="@+id/gaugeText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:textColor="@color/white"
+                    android:textSize="40sp"
+                    android:textStyle="bold" />
+
+                <ProgressBar
+                    android:id="@+id/gauge"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:layout_marginTop="8dp"
+                    android:max="100"
+                    android:progressTint="@color/white" />
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/statusCard1"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_dark_card"
+                    android:gravity="center_vertical"
+                    android:padding="12dp"
+                    android:textColor="@color/bq_text_dark"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+                <Space android:layout_width="10dp" android:layout_height="1dp" />
+                <TextView
+                    android:id="@+id/statusCard2"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_dark_card"
+                    android:gravity="center_vertical"
+                    android:padding="12dp"
+                    android:textColor="@color/bq_text_dark"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/statusCard3"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_dark_card"
+                    android:gravity="center_vertical"
+                    android:padding="12dp"
+                    android:textColor="@color/bq_text_dark"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+                <Space android:layout_width="10dp" android:layout_height="1dp" />
+                <TextView
+                    android:id="@+id/statusCard4"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_dark_card"
+                    android:gravity="center_vertical"
+                    android:padding="12dp"
+                    android:textColor="#FF5A5A"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/Widget.BudgetQuest.SectionLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="RECENT EXPENSES" />
+
+            <LinearLayout
+                android:id="@+id/recentListContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_dark_card"
+                android:orientation="vertical"
+                android:padding="10dp" />
         </LinearLayout>
     </ScrollView>
 
@@ -109,5 +182,5 @@
         android:contentDescription="+"
         android:src="@android:drawable/ic_input_add"
         app:backgroundTint="@color/bq_accent"
-        app:tint="@color/bq_text_dark" />
+        app:tint="@color/bq_bg" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -47,6 +47,11 @@ class LoginFragment : Fragment() {
                 binding.errorText.text = "Invalid input"
             }
         }
+        binding.demoBtn.setOnClickListener {
+            binding.username.setText(AppViewModel.DEMO_USERNAME)
+            binding.password.setText(AppViewModel.DEMO_PASSWORD)
+            vm.login(AppViewModel.DEMO_USERNAME, AppViewModel.DEMO_PASSWORD)
+        }
         binding.createAccount.setOnClickListener { findNavController().navigate(R.id.action_login_to_register) }
         binding.forgotPassword.setOnClickListener { findNavController().navigate(R.id.action_login_to_forgot) }
     }

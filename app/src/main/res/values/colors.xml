@@ -1,21 +1,21 @@
 <resources>
-    <color name="bq_bg">#1E4D2B</color>
-    <color name="bq_surface">#2A5E38</color>
-    <color name="bq_accent">#F5A623</color>
+    <color name="bq_bg">#111316</color>
+    <color name="bq_surface">#171A30</color>
+    <color name="bq_accent">#F19960</color>
     <color name="bq_warning">#E53935</color>
-    <color name="bq_safe">#4CAF50</color>
+    <color name="bq_safe">#36D58D</color>
     <color name="bq_text_primary">#FFFFFF</color>
     <color name="bq_text_secondary">#B0BEC5</color>
-    <color name="bq_canvas">#EEF1F5</color>
-    <color name="bq_panel">#FFFFFF</color>
-    <color name="bq_header">#175B46</color>
-    <color name="bq_input_bg">#F1F4F7</color>
-    <color name="bq_input_border">#C8D1DA</color>
-    <color name="bq_text_dark">#1E2A35</color>
-    <color name="bq_text_muted">#607080</color>
-    <color name="bq_link">#0B5CAD</color>
-    <color name="bq_tab_inactive">#8A99A8</color>
-    <color name="bq_tab_active">#0B5CAD</color>
+    <color name="bq_canvas">#111316</color>
+    <color name="bq_panel">#1A1D38</color>
+    <color name="bq_header">#1A1D38</color>
+    <color name="bq_input_bg">#23264A</color>
+    <color name="bq_input_border">#313666</color>
+    <color name="bq_text_dark">#F7F8FF</color>
+    <color name="bq_text_muted">#A8ADD1</color>
+    <color name="bq_link">#F19960</color>
+    <color name="bq_tab_inactive">#8E98A3</color>
+    <color name="bq_tab_active">#F19960</color>
     <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
 </resources>

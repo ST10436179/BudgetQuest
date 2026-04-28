@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
@@ -25,6 +26,9 @@ public final class FragmentExpenseListBinding implements ViewBinding {
   public final EditText endDate;
 
   @NonNull
+  public final TextView entryCountText;
+
+  @NonNull
   public final LinearLayout listContainer;
 
   @NonNull
@@ -33,13 +37,19 @@ public final class FragmentExpenseListBinding implements ViewBinding {
   @NonNull
   public final EditText startDate;
 
+  @NonNull
+  public final TextView totalText;
+
   private FragmentExpenseListBinding(@NonNull ScrollView rootView, @NonNull EditText endDate,
-      @NonNull LinearLayout listContainer, @NonNull Button loadMore, @NonNull EditText startDate) {
+      @NonNull TextView entryCountText, @NonNull LinearLayout listContainer,
+      @NonNull Button loadMore, @NonNull EditText startDate, @NonNull TextView totalText) {
     this.rootView = rootView;
     this.endDate = endDate;
+    this.entryCountText = entryCountText;
     this.listContainer = listContainer;
     this.loadMore = loadMore;
     this.startDate = startDate;
+    this.totalText = totalText;
   }
 
   @Override
@@ -75,6 +85,12 @@ public final class FragmentExpenseListBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.entryCountText;
+      TextView entryCountText = ViewBindings.findChildViewById(rootView, id);
+      if (entryCountText == null) {
+        break missingId;
+      }
+
       id = R.id.listContainer;
       LinearLayout listContainer = ViewBindings.findChildViewById(rootView, id);
       if (listContainer == null) {
@@ -93,8 +109,14 @@ public final class FragmentExpenseListBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentExpenseListBinding((ScrollView) rootView, endDate, listContainer, loadMore,
-          startDate);
+      id = R.id.totalText;
+      TextView totalText = ViewBindings.findChildViewById(rootView, id);
+      if (totalText == null) {
+        break missingId;
+      }
+
+      return new FragmentExpenseListBinding((ScrollView) rootView, endDate, entryCountText,
+          listContainer, loadMore, startDate, totalText);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

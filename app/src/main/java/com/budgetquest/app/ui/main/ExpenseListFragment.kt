@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
@@ -42,18 +43,49 @@ class ExpenseListFragment : Fragment() {
     private fun load() {
         vm.expensesLive(startDate, endDate).observe(viewLifecycleOwner) { list ->
             binding.listContainer.removeAllViews()
-            list.take(50).forEach { e ->
-                val item = TextView(requireContext()).apply {
-                    text = "• ${e.date}  ${FormatUtils.zar(e.amountZar)}  ${e.description}"
-                    setTextColor(resources.getColor(android.R.color.white, null))
-                    textSize = 16f
-                    setPadding(0, 8, 0, 8)
+            binding.entryCountText.text = "${list.size} ENTRIES"
+            binding.totalText.text = "Total: ${FormatUtils.zar(list.sumOf { it.amountZar })}"
+
+            list.take(50).forEachIndexed { index, e ->
+                val row = LinearLayout(requireContext()).apply {
+                    orientation = LinearLayout.HORIZONTAL
+                    setPadding(8, 12, 8, 12)
                     setOnClickListener {
                         val bundle = Bundle().apply { putString("expenseId", e.id.toString()) }
                         findNavController().navigate(R.id.addEditExpenseFragment, bundle)
                     }
                 }
-                binding.listContainer.addView(item)
+
+                val day = e.date.takeLast(2)
+                val dayView = TextView(requireContext()).apply {
+                    text = day
+                    setTextColor(resources.getColor(R.color.bq_accent, null))
+                    textSize = 24f
+                    setPadding(0, 0, 18, 0)
+                }
+                val desc = TextView(requireContext()).apply {
+                    text = "${e.description}\n${e.date} • ${e.startTime}-${e.endTime}"
+                    setTextColor(resources.getColor(R.color.bq_text_dark, null))
+                    textSize = 13f
+                    layoutParams = LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1f)
+                }
+                val amount = TextView(requireContext()).apply {
+                    text = FormatUtils.zar(e.amountZar)
+                    setTextColor(resources.getColor(R.color.bq_accent, null))
+                    textSize = 20f
+                }
+                row.addView(dayView)
+                row.addView(desc)
+                row.addView(amount)
+                binding.listContainer.addView(row)
+
+                if (index != list.take(50).lastIndex) {
+                    val divider = View(requireContext()).apply {
+                        layoutParams = ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 1)
+                        setBackgroundColor(resources.getColor(R.color.bq_input_border, null))
+                    }
+                    binding.listContainer.addView(divider)
+                }
             }
         }
     }

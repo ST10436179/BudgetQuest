@@ -4,6 +4,7 @@ package com.budgetquest.app.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -34,6 +35,21 @@ public final class FragmentDashboardBinding implements ViewBinding {
   public final TextView levelBadge;
 
   @NonNull
+  public final LinearLayout recentListContainer;
+
+  @NonNull
+  public final TextView statusCard1;
+
+  @NonNull
+  public final TextView statusCard2;
+
+  @NonNull
+  public final TextView statusCard3;
+
+  @NonNull
+  public final TextView statusCard4;
+
+  @NonNull
   public final TextView subtitle;
 
   @NonNull
@@ -41,12 +57,19 @@ public final class FragmentDashboardBinding implements ViewBinding {
 
   private FragmentDashboardBinding(@NonNull CoordinatorLayout rootView,
       @NonNull FloatingActionButton fab, @NonNull ProgressBar gauge, @NonNull TextView gaugeText,
-      @NonNull TextView levelBadge, @NonNull TextView subtitle, @NonNull TextView welcome) {
+      @NonNull TextView levelBadge, @NonNull LinearLayout recentListContainer,
+      @NonNull TextView statusCard1, @NonNull TextView statusCard2, @NonNull TextView statusCard3,
+      @NonNull TextView statusCard4, @NonNull TextView subtitle, @NonNull TextView welcome) {
     this.rootView = rootView;
     this.fab = fab;
     this.gauge = gauge;
     this.gaugeText = gaugeText;
     this.levelBadge = levelBadge;
+    this.recentListContainer = recentListContainer;
+    this.statusCard1 = statusCard1;
+    this.statusCard2 = statusCard2;
+    this.statusCard3 = statusCard3;
+    this.statusCard4 = statusCard4;
     this.subtitle = subtitle;
     this.welcome = welcome;
   }
@@ -102,6 +125,36 @@ public final class FragmentDashboardBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.recentListContainer;
+      LinearLayout recentListContainer = ViewBindings.findChildViewById(rootView, id);
+      if (recentListContainer == null) {
+        break missingId;
+      }
+
+      id = R.id.statusCard1;
+      TextView statusCard1 = ViewBindings.findChildViewById(rootView, id);
+      if (statusCard1 == null) {
+        break missingId;
+      }
+
+      id = R.id.statusCard2;
+      TextView statusCard2 = ViewBindings.findChildViewById(rootView, id);
+      if (statusCard2 == null) {
+        break missingId;
+      }
+
+      id = R.id.statusCard3;
+      TextView statusCard3 = ViewBindings.findChildViewById(rootView, id);
+      if (statusCard3 == null) {
+        break missingId;
+      }
+
+      id = R.id.statusCard4;
+      TextView statusCard4 = ViewBindings.findChildViewById(rootView, id);
+      if (statusCard4 == null) {
+        break missingId;
+      }
+
       id = R.id.subtitle;
       TextView subtitle = ViewBindings.findChildViewById(rootView, id);
       if (subtitle == null) {
@@ -115,7 +168,8 @@ public final class FragmentDashboardBinding implements ViewBinding {
       }
 
       return new FragmentDashboardBinding((CoordinatorLayout) rootView, fab, gauge, gaugeText,
-          levelBadge, subtitle, welcome);
+          levelBadge, recentListContainer, statusCard1, statusCard2, statusCard3, statusCard4,
+          subtitle, welcome);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

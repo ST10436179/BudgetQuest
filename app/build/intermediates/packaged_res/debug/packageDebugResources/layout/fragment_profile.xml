@@ -5,14 +5,14 @@
     android:background="@color/bq_canvas">
     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/bg_header_block" android:gravity="center_horizontal" android:orientation="vertical" android:padding="18dp">
-            <TextView android:id="@+id/avatar" android:layout_width="64dp" android:layout_height="64dp" android:background="@drawable/bg_chip" android:gravity="center" android:textColor="@color/bq_header" android:textSize="28sp" android:textStyle="bold" />
+            <TextView android:id="@+id/avatar" android:layout_width="64dp" android:layout_height="64dp" android:background="@drawable/bg_chip" android:gravity="center" android:textColor="@color/bq_accent" android:textSize="28sp" android:textStyle="bold" />
             <TextView android:id="@+id/username" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:gravity="center" android:textColor="@color/white" android:textSize="30sp" android:textStyle="bold" />
-            <TextView android:id="@+id/memberSince" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:textColor="#C9E0D6" />
+            <TextView android:id="@+id/memberSince" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:textColor="@color/bq_text_muted" />
         </LinearLayout>
 
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@color/bq_panel" android:orientation="vertical" android:padding="16dp">
             <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/bg_soft_card" android:orientation="vertical" android:padding="12dp">
-                <TextView android:id="@+id/rank" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@color/bq_header" android:textStyle="bold" />
+                <TextView android:id="@+id/rank" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@color/bq_accent" android:textStyle="bold" />
                 <TextView android:id="@+id/xpProgress" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:textColor="@color/bq_text_muted" />
                 <ProgressBar android:id="@+id/levelProgress" style="?android:attr/progressBarStyleHorizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:max="500" android:progressTint="@color/bq_safe" />
             </LinearLayout>

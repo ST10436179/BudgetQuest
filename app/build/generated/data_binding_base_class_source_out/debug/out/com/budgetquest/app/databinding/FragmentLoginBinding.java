@@ -25,6 +25,9 @@ public final class FragmentLoginBinding implements ViewBinding {
   public final TextView createAccount;
 
   @NonNull
+  public final Button demoBtn;
+
+  @NonNull
   public final TextView errorText;
 
   @NonNull
@@ -40,10 +43,11 @@ public final class FragmentLoginBinding implements ViewBinding {
   public final EditText username;
 
   private FragmentLoginBinding(@NonNull ScrollView rootView, @NonNull TextView createAccount,
-      @NonNull TextView errorText, @NonNull TextView forgotPassword, @NonNull Button loginBtn,
-      @NonNull EditText password, @NonNull EditText username) {
+      @NonNull Button demoBtn, @NonNull TextView errorText, @NonNull TextView forgotPassword,
+      @NonNull Button loginBtn, @NonNull EditText password, @NonNull EditText username) {
     this.rootView = rootView;
     this.createAccount = createAccount;
+    this.demoBtn = demoBtn;
     this.errorText = errorText;
     this.forgotPassword = forgotPassword;
     this.loginBtn = loginBtn;
@@ -84,6 +88,12 @@ public final class FragmentLoginBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.demoBtn;
+      Button demoBtn = ViewBindings.findChildViewById(rootView, id);
+      if (demoBtn == null) {
+        break missingId;
+      }
+
       id = R.id.errorText;
       TextView errorText = ViewBindings.findChildViewById(rootView, id);
       if (errorText == null) {
@@ -114,7 +124,7 @@ public final class FragmentLoginBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentLoginBinding((ScrollView) rootView, createAccount, errorText,
+      return new FragmentLoginBinding((ScrollView) rootView, createAccount, demoBtn, errorText,
           forgotPassword, loginBtn, password, username);
     }
     String missingId = rootView.getResources().getResourceName(id);

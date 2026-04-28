@@ -3068,6 +3068,8 @@ drawable bg_button_gold
 drawable bg_button_green
 drawable bg_card
 drawable bg_chip
+drawable bg_dark_card
+drawable bg_dashboard_total_card
 drawable bg_header_block
 drawable bg_input_field
 drawable bg_screen_panel
@@ -3356,6 +3358,7 @@ id decelerateAndComplete
 id decor_content_parent
 id default_activity_button
 id deltaRelative
+id demoBtn
 id dependency_ordering
 id descriptionInput
 id design_bottom_sheet
@@ -3395,6 +3398,7 @@ id endTime
 id endToStart
 id enterAlways
 id enterAlwaysCollapsed
+id entryCountText
 id errorText
 id escape
 id exitUntilCollapsed
@@ -3607,6 +3611,7 @@ id rank
 id ratio
 id receiptBox
 id receiptPreview
+id recentListContainer
 id rectangles
 id registerBtn
 id registerFragment
@@ -3685,6 +3690,10 @@ id startToEnd
 id startVertical
 id staticLayout
 id staticPostLayout
+id statusCard1
+id statusCard2
+id statusCard3
+id statusCard4
 id stop
 id stretch
 id submenuarrow
@@ -3729,6 +3738,7 @@ id title_template
 id toggle
 id top
 id topPanel
+id totalText
 id touch_outside
 id transitionToEnd
 id transitionToStart

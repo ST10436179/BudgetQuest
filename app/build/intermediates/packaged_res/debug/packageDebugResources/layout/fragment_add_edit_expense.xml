@@ -11,9 +11,9 @@
             android:background="@drawable/bg_header_block"
             android:orientation="vertical"
             android:padding="16dp">
-            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="← Cancel" android:textColor="#B8D8CB" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="← Cancel" android:textColor="@color/bq_text_muted" />
             <TextView android:id="@+id/title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="New Expense" android:textColor="@color/white" android:textSize="32sp" android:textStyle="bold" />
-            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="+10 XP awarded on save" android:textColor="#C9E0D6" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="+10 XP awarded on save" android:textColor="@color/bq_text_muted" />
         </LinearLayout>
 
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@color/bq_panel" android:orientation="vertical" android:padding="16dp">

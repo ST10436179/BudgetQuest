@@ -1,102 +1,118 @@
 [
     {
-        "merged": "com.budgetquest.app-debug-53:/drawable_bg_input_field.xml.flat",
-        "source": "com.budgetquest.app-main-55:/drawable/bg_input_field.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-debug-53:\\drawable_bg_input_field.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-main-55:\\drawable\\bg_input_field.xml"
     },
     {
-        "merged": "com.budgetquest.app-debug-53:/layout_fragment_login.xml.flat",
-        "source": "com.budgetquest.app-main-55:/layout/fragment_login.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-debug-53:\\layout_fragment_forgot_password.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-main-55:\\layout\\fragment_forgot_password.xml"
     },
     {
-        "merged": "com.budgetquest.app-debug-53:/drawable_ic_launcher_background.xml.flat",
-        "source": "com.budgetquest.app-main-55:/drawable/ic_launcher_background.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-debug-53:\\navigation_nav_graph.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-main-55:\\navigation\\nav_graph.xml"
     },
     {
-        "merged": "com.budgetquest.app-debug-53:/layout_fragment_category_totals.xml.flat",
-        "source": "com.budgetquest.app-main-55:/layout/fragment_category_totals.xml"
+        "merged": "com.budgetquest.app-debug-53:/drawable_bg_dashboard_total_card.xml.flat",
+        "source": "com.budgetquest.app-main-55:/drawable/bg_dashboard_total_card.xml"
     },
     {
-        "merged": "com.budgetquest.app-debug-53:/layout_activity_main.xml.flat",
-        "source": "com.budgetquest.app-main-55:/layout/activity_main.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-debug-53:\\layout_fragment_category_totals.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-main-55:\\layout\\fragment_category_totals.xml"
     },
     {
-        "merged": "com.budgetquest.app-debug-53:/drawable_bg_card.xml.flat",
-        "source": "com.budgetquest.app-main-55:/drawable/bg_card.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-debug-53:\\color_bottom_nav_selector.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-main-55:\\color\\bottom_nav_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-debug-53:\\drawable_bg_screen_panel.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-main-55:\\drawable\\bg_screen_panel.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-debug-53:\\menu_bottom_nav_menu.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-main-55:\\menu\\bottom_nav_menu.xml"
     },
     {
         "merged": "com.budgetquest.app-debug-53:/layout_fragment_expense_list.xml.flat",
         "source": "com.budgetquest.app-main-55:/layout/fragment_expense_list.xml"
     },
     {
-        "merged": "com.budgetquest.app-debug-53:/drawable_bg_screen_panel.xml.flat",
-        "source": "com.budgetquest.app-main-55:/drawable/bg_screen_panel.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-debug-53:\\drawable_bg_header_block.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-main-55:\\drawable\\bg_header_block.xml"
     },
     {
-        "merged": "com.budgetquest.app-debug-53:/drawable_bg_button_green.xml.flat",
-        "source": "com.budgetquest.app-main-55:/drawable/bg_button_green.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-debug-53:\\layout_fragment_spending_graph.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-main-55:\\layout\\fragment_spending_graph.xml"
     },
     {
-        "merged": "com.budgetquest.app-debug-53:/layout_fragment_register.xml.flat",
-        "source": "com.budgetquest.app-main-55:/layout/fragment_register.xml"
-    },
-    {
-        "merged": "com.budgetquest.app-debug-53:/drawable_bg_soft_card.xml.flat",
-        "source": "com.budgetquest.app-main-55:/drawable/bg_soft_card.xml"
-    },
-    {
-        "merged": "com.budgetquest.app-debug-53:/layout_fragment_spending_graph.xml.flat",
-        "source": "com.budgetquest.app-main-55:/layout/fragment_spending_graph.xml"
-    },
-    {
-        "merged": "com.budgetquest.app-debug-53:/layout_fragment_budget_goals.xml.flat",
-        "source": "com.budgetquest.app-main-55:/layout/fragment_budget_goals.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-debug-53:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-main-55:\\layout\\activity_main.xml"
     },
     {
         "merged": "com.budgetquest.app-debug-53:/layout_fragment_dashboard.xml.flat",
         "source": "com.budgetquest.app-main-55:/layout/fragment_dashboard.xml"
     },
     {
-        "merged": "com.budgetquest.app-debug-53:/layout_fragment_forgot_password.xml.flat",
-        "source": "com.budgetquest.app-main-55:/layout/fragment_forgot_password.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-debug-53:\\layout_fragment_dashboard.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-main-55:\\layout\\fragment_dashboard.xml"
     },
     {
-        "merged": "com.budgetquest.app-debug-53:/drawable_bg_header_block.xml.flat",
-        "source": "com.budgetquest.app-main-55:/drawable/bg_header_block.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-debug-53:\\layout_fragment_register.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-main-55:\\layout\\fragment_register.xml"
     },
     {
-        "merged": "com.budgetquest.app-debug-53:/drawable_bg_chip.xml.flat",
-        "source": "com.budgetquest.app-main-55:/drawable/bg_chip.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-debug-53:\\drawable_bg_soft_card.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-main-55:\\drawable\\bg_soft_card.xml"
     },
     {
-        "merged": "com.budgetquest.app-debug-53:/menu_bottom_nav_menu.xml.flat",
-        "source": "com.budgetquest.app-main-55:/menu/bottom_nav_menu.xml"
+        "merged": "com.budgetquest.app-debug-53:/drawable_bg_dark_card.xml.flat",
+        "source": "com.budgetquest.app-main-55:/drawable/bg_dark_card.xml"
     },
     {
-        "merged": "com.budgetquest.app-debug-53:/color_bottom_nav_selector.xml.flat",
-        "source": "com.budgetquest.app-main-55:/color/bottom_nav_selector.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-debug-53:\\xml_file_paths.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-main-55:\\xml\\file_paths.xml"
     },
     {
-        "merged": "com.budgetquest.app-debug-53:/drawable_bg_button_gold.xml.flat",
-        "source": "com.budgetquest.app-main-55:/drawable/bg_button_gold.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-debug-53:\\layout_fragment_expense_list.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-main-55:\\layout\\fragment_expense_list.xml"
     },
     {
-        "merged": "com.budgetquest.app-debug-53:/navigation_nav_graph.xml.flat",
-        "source": "com.budgetquest.app-main-55:/navigation/nav_graph.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-debug-53:\\layout_fragment_budget_goals.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-main-55:\\layout\\fragment_budget_goals.xml"
     },
     {
-        "merged": "com.budgetquest.app-debug-53:/layout_fragment_profile.xml.flat",
-        "source": "com.budgetquest.app-main-55:/layout/fragment_profile.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-debug-53:\\layout_fragment_category_manager.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-main-55:\\layout\\fragment_category_manager.xml"
     },
     {
-        "merged": "com.budgetquest.app-debug-53:/layout_fragment_add_edit_expense.xml.flat",
-        "source": "com.budgetquest.app-main-55:/layout/fragment_add_edit_expense.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-debug-53:\\drawable_bg_chip.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-main-55:\\drawable\\bg_chip.xml"
     },
     {
-        "merged": "com.budgetquest.app-debug-53:/xml_file_paths.xml.flat",
-        "source": "com.budgetquest.app-main-55:/xml/file_paths.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-debug-53:\\layout_fragment_profile.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-main-55:\\layout\\fragment_profile.xml"
     },
     {
-        "merged": "com.budgetquest.app-debug-53:/layout_fragment_category_manager.xml.flat",
-        "source": "com.budgetquest.app-main-55:/layout/fragment_category_manager.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-debug-53:\\layout_fragment_add_edit_expense.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-main-55:\\layout\\fragment_add_edit_expense.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-debug-53:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-main-55:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-debug-53:\\layout_fragment_login.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-main-55:\\layout\\fragment_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-debug-53:\\drawable_bg_button_gold.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-main-55:\\drawable\\bg_button_gold.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-debug-53:\\drawable_bg_button_green.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-main-55:\\drawable\\bg_button_green.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-debug-53:\\drawable_bg_card.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\9.4.0\\com.budgetquest.app-main-55:\\drawable\\bg_card.xml"
     }
 ]

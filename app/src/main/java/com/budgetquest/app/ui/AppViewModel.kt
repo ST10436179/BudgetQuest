@@ -10,6 +10,7 @@ import com.budgetquest.app.util.SessionManager
 import kotlinx.coroutines.launch
 import timber.log.Timber
 import java.time.LocalDate
+import java.time.temporal.ChronoUnit
 
 /**
  * Single shared VM for this sample app, exposing auth/budget operations.
@@ -26,12 +27,14 @@ class AppViewModel(application: Application) : AndroidViewModel(application) {
 
     fun attemptAutoLogin() {
         val id = session.getUserId()
-        if (id > 0) {
-            viewModelScope.launch {
+        viewModelScope.launch {
+            if (id > 0) {
                 Timber.d("attemptAutoLogin userId=%s", id)
                 currentUser.postValue(repo.findUserById(id))
                 badges.postValue(repo.badges(id))
+                return@launch
             }
+            ensureDemoDataAndLogin()
         }
     }
 
@@ -95,6 +98,80 @@ class AppViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
+    /**
+     * Seeds a demo profile with realistic data and logs in automatically when no session exists.
+     * This runs once because the username is unique and reused on next launch.
+     */
+    private suspend fun ensureDemoDataAndLogin() {
+        Timber.d("ensureDemoDataAndLogin")
+        var demo = repo.findUserByUsername(DEMO_USERNAME)
+        if (demo == null) {
+            val demoId = repo.registerUser(
+                UserEntity(
+                    username = DEMO_USERNAME,
+                    passwordHash = SecurityUtils.sha256(DEMO_PASSWORD),
+                    securityQuestion = "What city were you born in?",
+                    securityAnswer = "Cape Town"
+                )
+            )
+            seedDefaultCategories(demoId)
+            seedDemoBudgetData(demoId)
+            demo = repo.findUserById(demoId)
+        }
+
+        if (demo != null) {
+            session.saveUserId(demo.id)
+            currentUserId.postValue(demo.id)
+            currentUser.postValue(demo)
+            badges.postValue(repo.badges(demo.id))
+        }
+    }
+
+    private suspend fun seedDemoBudgetData(userId: Long) {
+        val month = LocalDate.now().toString().substring(0, 7)
+        val categories = repo.categoriesNow(userId).associateBy { it.name }
+
+        repo.saveMonthlyGoals(
+            BudgetGoalEntity(userId = userId, monthlyMin = 1000.0, monthlyMax = 5000.0, month = month),
+            listOfNotNull(
+                categories["Groceries"]?.let { CategoryLimitEntity(userId = userId, categoryId = it.id, limitAmount = 2000.0, month = month) },
+                categories["Transport"]?.let { CategoryLimitEntity(userId = userId, categoryId = it.id, limitAmount = 1200.0, month = month) },
+                categories["Entertainment"]?.let { CategoryLimitEntity(userId = userId, categoryId = it.id, limitAmount = 800.0, month = month) },
+                categories["Utilities"]?.let { CategoryLimitEntity(userId = userId, categoryId = it.id, limitAmount = 1500.0, month = month) },
+                categories["Healthcare"]?.let { CategoryLimitEntity(userId = userId, categoryId = it.id, limitAmount = 1000.0, month = month) },
+                categories["Dining Out"]?.let { CategoryLimitEntity(userId = userId, categoryId = it.id, limitAmount = 700.0, month = month) }
+            )
+        )
+
+        val baseDate = LocalDate.now()
+        val demoExpenses = listOf(
+            Triple("Groceries", 450.0, "Woolworths weekly shop"),
+            Triple("Transport", 200.0, "Uber ride"),
+            Triple("Entertainment", 180.0, "Netflix"),
+            Triple("Dining Out", 340.0, "Ocean Basket"),
+            Triple("Utilities", 620.0, "Electricity top-up"),
+            Triple("Healthcare", 280.0, "Pharmacy essentials")
+        )
+
+        demoExpenses.forEachIndexed { index, (categoryName, amount, desc) ->
+            val category = categories[categoryName] ?: return@forEachIndexed
+            val expenseDate = baseDate.minus(index.toLong(), ChronoUnit.DAYS).toString()
+            repo.saveExpenseWithXp(
+                ExpenseEntity(
+                    userId = userId,
+                    categoryId = category.id,
+                    amountZar = amount,
+                    date = expenseDate,
+                    startTime = "09:00",
+                    endTime = "09:30",
+                    description = desc,
+                    receiptPhotoPath = null
+                ),
+                isUpdate = false
+            )
+        }
+    }
+
     fun categoriesLive(): LiveData<List<CategoryEntity>> {
         val userId = currentUserId.value ?: -1L
         return if (userId > 0) repo.categoriesLive(userId) else MutableLiveData(emptyList())
@@ -155,4 +232,9 @@ class AppViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     fun rankName(): String = GameLogic.rankFromXp(currentUser.value?.xp ?: 0)
+
+    companion object {
+        const val DEMO_USERNAME = "demo"
+        const val DEMO_PASSWORD = "Demo1234"
+    }
 }

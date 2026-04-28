@@ -15,7 +15,7 @@
             android:orientation="vertical"
             android:padding="16dp">
             <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Spending by Category" android:textColor="@color/white" android:textSize="32sp" android:textStyle="bold" />
-            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Limits vs actual spend" android:textColor="#C9E0D6" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Limits vs actual spend" android:textColor="@color/bq_text_muted" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"

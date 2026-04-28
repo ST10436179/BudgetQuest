@@ -24,6 +24,8 @@ drawable bg_button_gold
 drawable bg_button_green
 drawable bg_card
 drawable bg_chip
+drawable bg_dark_card
+drawable bg_dashboard_total_card
 drawable bg_header_block
 drawable bg_input_field
 drawable bg_screen_panel
@@ -58,9 +60,11 @@ id confirmPassword
 id createAccount
 id dashboardFragment
 id dateInput
+id demoBtn
 id descriptionInput
 id endDate
 id endTime
+id entryCountText
 id errorText
 id expenseListFragment
 id fab
@@ -89,6 +93,7 @@ id profileFragment
 id rank
 id receiptBox
 id receiptPreview
+id recentListContainer
 id registerBtn
 id registerFragment
 id resetBtn
@@ -99,9 +104,14 @@ id setGoals
 id spendingGraphFragment
 id startDate
 id startTime
+id statusCard1
+id statusCard2
+id statusCard3
+id statusCard4
 id subtitle
 id tileContainer
 id title
+id totalText
 id username
 id usernameError
 id welcome
